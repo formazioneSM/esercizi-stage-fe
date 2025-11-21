@@ -1,0 +1,95 @@
+.carousel-wrapper {
+    width: auto;
+    height: 200px; 
+    position: relative;
+    overflow: hidden;
+    padding: 10px 0;
+    
+}
+
+.carousel-wrapper input {
+    display: none; 
+}
+
+/* Container: largo il doppio della viewport (200%) per contenere 2 gruppi da 3 slide */
+.slides-container {
+    display: flex;
+    width: 200%; 
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Slide: 100% / 6 = 16.6666% del contenitore */
+.slide-image {
+    width: 16.6666%; 
+    height: 100%;
+    position: relative;
+    padding: 0 5px; 
+}
+
+.slide-image img {
+    width: auto;      
+    max-width: 100%;  
+    height: auto;     
+    max-height: 100%; 
+    object-fit: cover; 
+    display: block;   
+    margin: 0 auto;   
+}
+
+.slide-image span {
+    position: absolute;
+    bottom: 25px;
+    left: 10px;
+    color: white;
+    font-size: 17px;
+    padding: 4px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+/* --- LOGICA MOVIMENTO --- */
+/* Slide 1: start (Vedi 1, 2, 3) */
+#slide1:checked ~ .slides-container { transform: translateX(0%); }
+
+/* Slide 2: scorri 1 posto (Vedi 2, 3, 4) -> -16.66% */
+#slide2:checked ~ .slides-container { transform: translateX(-16.6666%); }
+
+/* Slide 3: scorri 2 posti (Vedi 3, 4, 5) -> -33.3333% */
+#slide3:checked ~ .slides-container { transform: translateX(-33.3333%); }
+
+/* Slide 4, 5, 6: BLOCCO ALLA FINE (Vedi 4, 5, 6) -> -50% */
+/* -50% significa spostare la metà esatta del container, mostrando la parte destra */
+#slide4:checked ~ .slides-container { transform: translateX(-50%); }
+#slide5:checked ~ .slides-container { transform: translateX(-50%); }
+#slide6:checked ~ .slides-container { transform: translateX(-50%); }
+
+
+/* --- FRECCE --- */
+.arrows label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 28px;
+    font-size: 20px;
+    user-select: none;
+    display: none;
+    z-index: 10;
+}
+
+.arrows .prev::before { content: "❮"; }
+.arrows .next::before { content: "❯"; }
+.arrows .prev { left: 5px; }
+.arrows .next { right: 5px; }
+
+#slide1:checked ~ .arrows .arrow-1 { display: block; }
+#slide2:checked ~ .arrows .arrow-2 { display: block; }
+#slide3:checked ~ .arrows .arrow-3 { display: block; }
+#slide4:checked ~ .arrows .arrow-4 { display: block; }
+#slide5:checked ~ .arrows .arrow-5 { display: block; }
+#slide6:checked ~ .arrows .arrow-6 { display: block; }

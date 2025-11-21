@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.ico" />
+    <link rel="stylesheet" href="./fonts.css" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./nav.css" />
+    <link rel="stylesheet" href="./carousel.css" />
+    <link rel="stylesheet" href="./search-bar.css" />
+    <link rel="stylesheet" href="./blue-banner.css" />
+    <link rel="stylesheet" href="./section.css" />
+    <link rel="stylesheet" href="./scroll-day.css" />
+    <link rel="stylesheet" href="./previsioni.css" />
+    <link rel="stylesheet" href="./aside.css" />
+    <link rel="stylesheet" href="./grid.css" />
+    <link rel="stylesheet" href="./elements.css" />
+    <title>Il meteo</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><i class="fas fa-bars"></i></li>
+          <li>Previsioni</li>
+          <li>Situazione</li>
+          <li>Radar</li>
+          <li>Mappe</li>
+          <li>Neve</li>
+          <li>Venti e Mari</li>
+          <li>Utilità</li>
+        </ul>
+
+        <ul>
+          <li>Contatti</li>
+          <li>Accedi</li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="page-wrapper">
+      <!--  ************************************** INIZIO HEADER ************************************** -->
+      <header>
+        <div class="main-content-row">
+          <div class="search-and-heart-group">
+            <div class="search-bar">
+              <img
+                src="./assets/images/logo.png"
+                alt="Logo Il Meteo"
+                class="search-logo"
+              />
+              <span class="search-arrow">&#9654;</span>
+              <input type="text" placeholder="Cerca località..." />
+              <i class="search-icon fas fa-search"></i>
+            </div>
+
+            <div class="heart-icon-wrapper"></div>
+          </div>
+
+          <div class="social-icons">
+            <i
+              class="fab fa-whatsapp"
+              data-label="ilMeteo - Canale WhatsApp"
+            ></i>
+            <i
+              class="fab fa-facebook-f"
+              data-label="ilMeteo - Pagina Facebook"
+            ></i>
+            <i
+              class="fab fa-instagram"
+              data-label="ilMeteo - Foto su Instagram"
+            ></i>
+            <i class="fab fa-tiktok" data-label="ilMeteo su TikTok"></i>
+            <i
+              class="fab fa-youtube"
+              data-label="ilMeteo - video su YouTube"
+            ></i>
+            <i class="fab fa-linkedin-in" data-label="ilMeteo su LinkedIn"></i>
+            <i class="fas fa-lock" data-label="Ingresso area utenti"></i>
+          </div>
+        </div>
+      </header>
+      <!-- ************************************* FINE HEADER ************************************** -->
+
+      <!-- ************************************* INIZIO MAIN ************************************** -->
+
+      <main>
+        <div class="blue-banner">
+          <div class="meteo-text-group">
+            <span class="meteo-title">PREVISIONI METEO ITALIA</span>
+            <span class="meteo-update"
+              >Aggiornamento: Mercoledì 19 ore 9:23</span
+            >
+          </div>
+
+          <div class="post-box">
+            <img
+              src="assets/images/x.svg"
+              alt="Icona Post X"
+              class="post-icon-svg"
+            />
+            Post
+          </div>
+        </div>
+
+        <div class="flex-row">
+          <section class="col-left image-container">
+            <div class="headline-tag">
+              <span class="page-title">PRIMA PAGINA</span>
+              <span class="time-stamp">Ore 12:44</span>
+            </div>
+
+            <img
+              src="assets/images/sectionImage.png"
+              alt="Anteprima Prima Pagina"
+            />
+
+            <div class="image-caption">
+              <span
+                >Meteo: Weekend nuove sorprese del Maltempo per Sabato e
+                Domenica.</span
+              >
+            </div>
+
+            <div class="carousel-wrapper">
+              <!-- Radio -->
+              <input type="radio" name="slider" id="slide1" checked />
+              <input type="radio" name="slider" id="slide2" />
+              <input type="radio" name="slider" id="slide3" />
+              <input type="radio" name="slider" id="slide4" />
+              <input type="radio" name="slider" id="slide5" />
+              <input type="radio" name="slider" id="slide6" />
+
+              <!-- Slide container -->
+              <div class="slides-container">
+                <div class="slide-image">
+                  <img src="assets/images/a.png" />
+                  <span>Meteo: tra poche ore tornano le piogge</span>
+                </div>
+
+                <div class="slide-image">
+                  <img src="assets/images/b.png" />
+                  <span>Allerta Temporali al Nord</span>
+                </div>
+
+                <div class="slide-image">
+                  <img src="assets/images/c.png" />
+                  <span>Mappa Venti Forti</span>
+                </div>
+
+                <div class="slide-image">
+                  <img src="assets/images/d.png" />
+                  <span>Mappa Aria Fredda</span>
+                </div>
+
+                <div class="slide-image">
+                  <img src="assets/images/e.png" />
+                  <span>Mappa Neve</span>
+                </div>
+
+                <div class="slide-image">
+                  <img src="assets/images/f.png" />
+                  <span>Avviso Mete: Winter Vortex</span>
+                </div>
+              </div>
+
+              <!-- Frecce -->
+              <div class="arrows">
+                <!-- Slide 1 (Vedi 1-2-3) -->
+                <label for="slide4" class="prev arrow-1"></label>
+                <label for="slide2" class="next arrow-1"></label>
+
+                <!-- Slide 2 (Vedi 2-3-4)  -->
+                <label for="slide1" class="prev arrow-2"></label>
+                <label for="slide3" class="next arrow-2"></label>
+
+                <!-- Slide 3 (Vedi 3-4-5)  -->
+                <label for="slide2" class="prev arrow-3"></label>
+                <label for="slide4" class="next arrow-3"></label>
+
+                <!-- Slide 4 (Vedi 4-5-6 - FINE) -->
+                <label for="slide3" class="prev arrow-4"></label>
+                <label for="slide1" class="next arrow-4"></label>
+
+                <!-- Slide 5 e 6 -->
+                <label for="slide4" class="prev arrow-5"></label>
+                <label for="slide1" class="next arrow-5"></label>
+
+                <label for="slide4" class="prev arrow-6"></label>
+                <label for="slide1" class="next arrow-6"></label>
+              </div>
+            </div>
+
+            <div class="text-post-carousel">
+              <span>Anticipo d’Inverno: freddo e neve anche in pianura</span>
+            </div>
+
+            <div class="scrolling-menu-container">
+              <div class="scrolling-menu">
+                <div class="day-item active-general">Generale</div>
+                <div class="day-item">Oggi</div>
+                <div class="day-item">Domani</div>
+                <div class="day-item">Dopodomani</div>
+                <div class="day-item">Domenica 23</div>
+                <div class="day-item">Lunedì 24</div>
+                <div class="day-item">Martedì 25</div>
+                <div class="day-item">15 Giorni</div>
+              </div>
+
+              <div class="scroll-indicator right">
+                <i class="fas fa-caret-right"></i>
+              </div>
+
+              <div class="custom-scrollbar-wrapper">
+                <div class="scroll-arrow left-arrow">
+                  <i class="fas fa-caret-left"></i>
+                </div>
+
+                <div class="progress-bar-container custom-track">
+                  <div class="progress-bar custom-thumb"></div>
+                </div>
+
+                <div class="scroll-arrow right-arrow">
+                  <i class="fas fa-caret-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="wrapper-previsioni">
+              
+              <div class="container-previsioni">
+                <div class="container-text">
+                  <h1 class="titolo-inverno">
+                    L'Inverno gioca d'Anticipo, da Venerdì "Winter Vortex", NEVE
+                    anche in pianura!
+                  </h1>
+  
+                  <p class="corpo-testo">
+                    Giovedì, a tratti instabile al Nord con neve oltre 700 metri
+                    sulle Alpi, maltempo su Tirreniche, Umbria, forte in Campania
+                    (nubifragio a Napoli). Da Venerdì 21 e nel WEEKEND, ciclone
+                    invernale con vento, piogge battenti e NEVE fino in pianura al
+                    Nordovest. PROSSIMA SETTIMANA: altro maltempo, ancora neve in
+                    pianura al Nord. TEMPERATURE: crollo generale!
+                  </p>
+  
+                  <h6 class="containet-text-separato">
+                    Segnala il tempo nella tua città.
+                  </h6>
+                </div>
+  
+                <div class="container-banner">
+                  <div class="container-firt-banner">
+                    <div class="banner-item active">Tempo</div>
+                    <div class="banner-item">Precipitazioni</div>
+                    <div class="banner-item">Neve</div>
+                    <div class="banner-item">Temperature</div>
+                    <div class="banner-item">Venti-Mari</div>
+                    <div class="banner-item">Radar</div>
+                  </div>
+  
+                  <div class="container-second-banner">
+                    <div class="second-banner active">Giornata</div>
+                    <div class="second-banner">Mattina</div>
+                    <div class="second-banner">Pomeriggio</div>
+                    <div class="second-banner">Sera</div>
+                    <div class="second-banner">Notte</div>
+                  </div>
+  
+                  <div class="container-image">
+                    <img
+                      src="assets/images/meteo-map.png"
+                      alt="Mappa meteo Italia"
+                      class="map-image-full"
+                    />
+                  </div>
+  
+                  
+                </div>
+              </div>
+              <div class="griglia">
+                <img src="assets/images/grid1.png" alt="Widget1">
+                <img src="assets/images/grid2.png" alt="Widget2">
+                <img src="assets/images/grid3.png" alt="Widget3">
+                <img src="assets/images/grid4.png" alt="Widget4">
+
+              </div>
+            </div>
+
+            <div class="container-elements">
+              <div class="first-element">
+                <span>METEO RECORD</span>
+              </div>
+              <div class="second-element">
+                <span>RADAR</span>
+              </div>
+              <div class="third-element">
+                <span>WEBCAM</span>
+              </div>
+            </div>
+
+          </section>
+
+          <aside class="col-right">
+            <img src="assets/images/sky.png" alt="Contenuto Correlato" />
+
+            <div class="container-text-aside">
+              <span>VIDEO PREVISIONI METEO</span>
+            </div>
+
+            <div class="container-video">
+              <video width="100%" controls autoplay muted loop>
+                <source src="assets/video/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </aside>
+        </div>
+      </main>
+
+      <!-- ************************************* FINE MAIN ************************************** -->
+    </div>
+  </body>
+</html>

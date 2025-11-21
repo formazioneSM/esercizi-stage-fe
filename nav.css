@@ -1,0 +1,19 @@
+nav{
+    background-color: var(--navbarBackground);
+    color:white;
+    height: 30px;
+    padding-inline: 18px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    font-size: 20px;
+    width: auto;
+
+}
+
+.nav-container{
+    --navbarBackground: rgb(92, 92, 92); 
+    max-width: 1000px; 
+    
+    margin: 100px auto 0 auto;
+}
