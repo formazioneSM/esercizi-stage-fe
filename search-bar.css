@@ -1,0 +1,161 @@
+.main-content-row {
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+
+    /* layout a 3 colonne */
+    gap: 20px;
+}
+
+/* Colonna sinistra "vuota", si allarga da sola */
+.main-content-row::before {
+    content: "";
+    flex: 1;
+}
+
+
+.search-and-heart-group {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+    margin: 0 auto;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #cfcfcf;
+    border-radius: 12px;
+    width: 450px;
+    height: 72px;
+    padding: 0;
+}        
+
+.search-logo {
+    height: 100%;      
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border-top-left-radius: 12px;     
+    border-bottom-left-radius: 12px;  
+    display: block;    /* rimuove spazi inline */
+}
+
+/* Freccia dentro la barra di ricerca */
+.search-arrow {
+    font-size: 20px;
+    color: #6a6a6a;
+    margin: 0 12px;
+}
+
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 22px;  
+    color: #545454;
+}
+
+.search-bar input::placeholder {
+    color: #676767;
+}
+
+
+.search-icon {
+    font-size: 22px;
+    color: #6d6d6d;
+    padding-right: 15px;
+}
+
+.heart-icon-wrapper {
+  width: 26px;
+  height: 26px;
+  background-image: url('assets/images/utility_bar_favorite_list.svg');
+  cursor: pointer;
+  
+}
+
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-icons i {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color:#9b9b9b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: white;
+    cursor: pointer;
+    position: relative; /* necessario altrimenti il testo dopo si sposta */
+}
+
+
+.social-icons i::after {
+    content: attr(data-label); /*significa che lo prende dall'attributo che sta in index.html */
+    position: absolute; /*per metterlo dove ho deciso */
+    left: 34px;
+    transform: translateX(-50%);
+    top: 34px; 
+    padding: 4px 10px;
+    background: white;
+    border: 2px solid #070707;
+    font-size: 13px;
+    color: #333;
+    white-space: nowrap;
+    opacity: 0; /*perchè inizialmente è nascosto */ 
+    pointer-events: none; /*il tooltip non interferisce con il mouse */
+    transition: opacity 0.15s ease-in-out;
+    font-family: ilMattino;
+    /*font-weight: normal;*/
+}
+
+/* Mostra tooltip */
+.social-icons i:hover::after {
+    opacity: 1;
+    z-index: 20; /*per andare sopra gli altri elementi */
+}
+
+
+.social-icons i.fa-whatsapp:hover {
+    background-color: #65A618 ;
+}
+
+
+.social-icons i.fa-facebook-f:hover {
+    background-color: #1877F2;
+}
+
+
+.social-icons i.fa-instagram:hover {
+    background-color: #C13584;
+}
+
+
+.social-icons i.fa-tiktok:hover {
+    background-color: #000000;
+}
+
+
+.social-icons i.fa-youtube:hover {
+    background-color: #FF0000;
+}
+
+
+.social-icons i.fa-linkedin-in:hover {
+    background-color: #0A66C2;
+}
+
+.social-icons i.fa-lock:hover {
+    background-color: #0A66C2;
+}
+
