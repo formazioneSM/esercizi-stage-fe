@@ -49,11 +49,19 @@ ul{
 @media (max-width: 768px) {
   .page-wrapper {
     padding: 0 10px;
+
   }
+  body {
+        background: white; 
+    }
 }
 
 @media (max-width: 480px) {
   .page-wrapper {
     padding: 0 6px;
+
   }
+  body {
+        background: white; 
+    }
 }

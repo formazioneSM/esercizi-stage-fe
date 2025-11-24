@@ -33,11 +33,7 @@
     background-color: gray;
 }
 
-/* ---------------------------------------------------------
-   RESPONSIVE COMPLETO SU TUTTE LE MISURE
---------------------------------------------------------- */
 
-/* 1024px – laptop */
 @media (max-width: 1024px) {
   .container-elements {
     padding: 18px;
