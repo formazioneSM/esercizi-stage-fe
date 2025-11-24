@@ -17,3 +17,49 @@ nav{
     
     margin: 100px auto 0 auto;
 }
+
+
+
+@media (max-width: 768px) {
+  
+  .nav-container {
+    margin-top: 20px; 
+  }
+
+  nav {
+    background-color: white !important; /* inversione colori */
+    color: #4a4a4a !important;
+    height: 50px;
+    padding-inline: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+  }
+
+  
+  nav ul:first-child li {
+    display: none; /* nasconde tutte le voci */
+  }
+
+  nav ul:first-child li:first-child {
+    display: flex !important;
+    font-size: 22px;
+    color: #4a4a4a;
+    padding-inline: 8px;
+  }
+
+ nav ul:last-child li {
+      background: #007AB9;
+      padding: 2px 10px;     
+      border-radius: 4px;
+      font-size: 13px;       
+      color: white !important;
+      margin-left: 10px;     
+      height: auto;
+      line-height: 1.2;      
+      display: inline-flex;  
+      align-items: center;   
+  }
+  nav ul:last-child li:hover {
+    background: #005f8e;
+  }
+}

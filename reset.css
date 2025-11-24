@@ -7,8 +7,6 @@
 body {
    
     background-image: linear-gradient(to bottom, darkturquoise, white); 
-    /* Fissa l'altezza per assicurarti che la sfumatura sia visibile sull'intera pagina.
-       Questo garantisce che la sfumatura si estenda fino in fondo. */
     min-height: 100vh; 
 }
 * {
@@ -47,3 +45,15 @@ ul{
     
 }
 
+
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-wrapper {
+    padding: 0 6px;
+  }
+}
