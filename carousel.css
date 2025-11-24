@@ -4,14 +4,12 @@
     position: relative;
     overflow: hidden;
     padding: 10px 0;
-    
 }
 
 .carousel-wrapper input {
     display: none; 
 }
 
-/* Container: largo il doppio della viewport (200%) per contenere 2 gruppi da 3 slide */
 .slides-container {
     display: flex;
     width: 200%; 
@@ -41,11 +39,17 @@
     position: absolute;
     bottom: 25px;
     left: 10px;
+    right: 10px;
     color: white;
     font-size: 17px;
-    padding: 4px;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-weight: bold;
+    padding: 4px 6px;
+    text-shadow: 0px 0px 5px rgb(74, 15, 252);
+    z-index: 5;
+    line-height: 1;
 }
+
+
 /* --- LOGICA MOVIMENTO --- */
 /* Slide 1: start (Vedi 1, 2, 3) */
 #slide1:checked ~ .slides-container { transform: translateX(0%); }
@@ -57,7 +61,6 @@
 #slide3:checked ~ .slides-container { transform: translateX(-33.3333%); }
 
 /* Slide 4, 5, 6: BLOCCO ALLA FINE (Vedi 4, 5, 6) -> -50% */
-/* -50% significa spostare la metà esatta del container, mostrando la parte destra */
 #slide4:checked ~ .slides-container { transform: translateX(-50%); }
 #slide5:checked ~ .slides-container { transform: translateX(-50%); }
 #slide6:checked ~ .slides-container { transform: translateX(-50%); }
@@ -93,3 +96,64 @@
 #slide4:checked ~ .arrows .arrow-4 { display: block; }
 #slide5:checked ~ .arrows .arrow-5 { display: block; }
 #slide6:checked ~ .arrows .arrow-6 { display: block; }
+
+
+@media (max-width: 700px) {
+
+  .carousel-wrapper {
+      height: 165px;
+  }
+
+  .slide-image span {
+      font-size: 14px;
+      bottom: 8px;
+      left: 8px;
+      right: 8px;
+      padding: 3px 4px;
+  }
+}
+
+
+@media (max-width: 520px) {
+
+  .carousel-wrapper {
+      height: 220px; 
+  }
+
+  .slide-image span {
+      position: static;     
+      display: block;
+      color: black;
+      background: rgba(255,255,255,0.9);
+      padding: 8px 10px;
+      font-size: 15px;
+      text-shadow: none;
+      margin-top: 5px;
+      border-radius: 6px;
+      line-height: 1.25;
+      width: 100%;
+      box-sizing: border-box;
+  }
+
+  .slide-image {
+      height: 160px; 
+  }
+
+  .slide-image img {
+      height: 100%;
+      object-fit: cover;
+  }
+}
+
+
+@media (max-width: 380px) {
+
+  .slide-image span {
+      font-size: 13px;
+      padding: 6px 8px;
+  }
+
+  .slide-image {
+      height: 140px;
+  }
+}

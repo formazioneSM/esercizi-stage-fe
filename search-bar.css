@@ -2,12 +2,9 @@
     display: flex;
     align-items: center;
     padding: 20px 25px;
-
-    /* layout a 3 colonne */
     gap: 20px;
 }
 
-/* Colonna sinistra "vuota", si allarga da sola */
 .main-content-row::before {
     content: "";
     flex: 1;
@@ -74,8 +71,14 @@
   width: 26px;
   height: 26px;
   background-image: url('assets/images/utility_bar_favorite_list.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
-  
+  display: inline-block;     
+  line-height: 0;            
+  overflow: hidden;          
+  font-size: 0;              
 }
 
 
@@ -97,6 +100,7 @@
     color: white;
     cursor: pointer;
     position: relative; /* necessario altrimenti il testo dopo si sposta */
+    overflow: hidden;
 }
 
 
@@ -124,6 +128,7 @@
     opacity: 1;
     z-index: 20; /*per andare sopra gli altri elementi */
 }
+
 
 
 .social-icons i.fa-whatsapp:hover {
@@ -159,3 +164,62 @@
     background-color: #0A66C2;
 }
 
+
+@media (max-width: 900px) {
+  .main-content-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .main-content-row::before {
+    display: none; /* elimina la colonna "vuota" */
+  }
+
+  .search-and-heart-group {
+    margin: 0;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-bar {
+    height: 60px;
+  }
+
+  .search-bar input {
+    font-size: 18px;
+  }
+
+  .social-icons {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .social-icons i {
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 420px) {
+  .search-bar {
+    height: 50px;
+  }
+
+  .search-arrow,
+  .search-icon {
+    font-size: 18px;
+  }
+
+  .search-logo {
+    height: 100%;
+  }
+}
