@@ -1,0 +1,25 @@
+body {
+    background-image: url('../assets/images/sfondo.png');
+    background-size: cover; 
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    overflow-x: hidden;
+}
+:root {
+    --blurple: #5865F2; 
+    --white: #FFFFFF;
+    --dark-blue: #23272A; 
+    --link-dark: #2A2E43; 
+    --gray-dark: #cfd3d7; 
+    
+    --navbar-padding-x: 50px;
+    --link-hover-padding-y: 5px;
+    --link-hover-padding-x: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
