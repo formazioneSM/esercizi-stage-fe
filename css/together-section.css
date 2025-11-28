@@ -1,0 +1,420 @@
+.fun-chat-section {
+    padding: 250px 50px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1; 
+    overflow: visible; 
+    
+}
+
+
+.fun-chat-card {
+    background-image: url("assets/images/sfondo2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100px;
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 3;
+    
+}
+
+.fun-chat-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    box-shadow: none;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(40px);
+    background-position: 100%;
+    background-size: cover;
+    border-radius: 100px;
+   
+}
+
+.fun-chat-card > * {
+    position: relative;
+    z-index: 4; 
+}
+
+
+.card-media {
+    flex-basis: 50%;
+    background: linear-gradient(135deg, #FF69B4, #8A2BE2); 
+    border-radius: 88px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 500px;
+    height: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    
+}
+
+
+.card-media video { 
+    width: 100%; 
+    height: 100%;
+    aspect-ratio: 1.29 / 1; 
+    object-fit: cover; 
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-content {
+    flex-basis: 45%;
+    color: var(--white);
+}
+
+.card-content h2 {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: BOLD;
+    font-weight: 700;
+}
+
+.card-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+    font-family: CONTENUTOCARD;
+    font-weight: 400;
+}
+
+
+
+
+.together-section {
+    padding: 250px 50px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    overflow: visible;
+}
+
+
+.together-card {
+    background-image: url("assets/images/sfondo2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100px;
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 70px 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    z-index: 3; 
+}
+
+
+.together-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(40px); 
+    z-index: 0; 
+}
+
+
+.together-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+.together-media {
+    flex-basis: 50%;
+    max-width: 500px;
+    height: 400px;
+    background: linear-gradient(to bottom, #175429 0%, #287a28 100%);
+    border-radius: 88px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border: none;
+}
+
+
+.together-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.together-card .card-content {
+    flex-basis: 45%;
+    color: var(--white);
+    margin-left: 5%;
+}
+
+
+.together-card .card-content h2 {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: BOLD;
+}
+
+
+.together-card .card-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+
+.together-decoration-people {
+    position: absolute;
+    top: 30px;
+    right: 15vw;
+    width: 30vw;
+    max-width: 450px;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 1; 
+}
+
+
+.together-person-solo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 0;
+    transform: translateY(-100px);
+    z-index: 1; 
+}
+
+
+.together-person-couple {
+    width: 220px;
+    height: auto;
+    transform: translateY(80px);
+    z-index: 1; 
+}
+
+
+.together-decoration-people img,
+.together-person-solo img,
+.together-person-couple img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+
+.together-decoration-turnip {
+    position: absolute;
+    bottom: 220px;
+    left: 10vw;
+    width: 10vw;
+    height: 10vw;
+    max-width: 130px;
+    max-height: 130px;
+    z-index: 5; 
+}
+
+
+.together-decoration-turnip img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.card-media.together-media video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 88px;
+    box-shadow: none;
+    background: #101c10;
+}
+
+
+
+@media screen and (max-width: 1200px) and (min-width: 901px) {
+    .together-decoration-people {
+        right: 15vw;
+        width: 50vw;
+        max-width: 350px; 
+        top: 50px;
+    }
+    .together-person-solo {
+        width: 150px;
+        transform: translateY(-60px);
+        left: -30px;
+        
+    }
+    .together-person-couple {
+        width: 180px;
+        transform: translateY(50px);
+    }
+    .together-decoration-turnip {
+        bottom: 250px; 
+        left: 5vw; 
+        width: 150px; 
+        height: 150px;
+        max-width: 100px;
+        max-height: 100px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    
+    .fun-chat-section {
+        padding: 100px 20px; 
+    }
+
+    
+    .fun-chat-card {
+        flex-direction: column; 
+        padding: 40px 20px; 
+        border-radius: 50px; 
+       
+    }
+
+    
+    .card-content {
+        order: 1; 
+        flex-basis: auto; 
+        width: 100%; 
+        margin-bottom: 50px; 
+        margin-top: 0; 
+
+    }
+
+    
+    .card-media {
+        order: 2; 
+        flex-basis: auto; 
+        width: 100%; 
+        max-width: none; 
+        height: auto; 
+        border-radius: 90px; 
+        padding-top: 77.52%; 
+        position: relative; 
+    }
+
+ 
+    .card-media video,
+    .card-media img { 
+        width: 100%; 
+        height: 100%;
+        object-fit: cover; 
+        display: block; 
+        position: absolute; 
+        top: 0; 
+        left: 0;
+    }
+    
+    
+    
+    
+    .card-content h2 {
+        font-size: 28px; 
+        margin-bottom: 15px;
+    }
+    
+    .fun-chat-card::before {
+        border-radius: 50px;
+    }
+    
+    .together-section {
+        padding: 100px 20px;
+    }
+    .together-card {
+        flex-direction: column; 
+        padding: 40px 20px;
+        border-radius: 50px;
+    }
+    .together-card .card-content {
+        order: 1;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    .together-media {
+        order: 2;
+        flex-basis: auto;
+        width: 100%;
+        max-width: none;
+        height: 250px;
+    }
+    .together-card .card-content h2 {
+        font-size: 28px;
+    }
+
+    
+    
+    .together-decoration-people,
+    .together-person-solo,
+    .together-person-couple {
+        display: block; 
+        position: absolute; 
+        
+    }
+
+    
+    .together-person-solo {
+        width: 150px; 
+        height: auto;
+        top: -22px; 
+        right: 140px; 
+        transform: none;
+        z-index: 12; 
+    }
+
+    
+    .together-person-couple {
+        width: 170px; 
+        height: auto;
+        bottom: -200px; 
+        left: -40px; 
+        transform: none; 
+        z-index: 2; 
+    }
+  
+    .together-decoration-turnip {
+        width: 100px;
+        height: 100px;
+        bottom: 50px;
+        left: 10px;
+        z-index: 5;
+    }
+}

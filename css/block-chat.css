@@ -1,0 +1,148 @@
+.block-chat-section {
+    padding: 250px 50px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1; 
+    overflow: hidden; 
+}
+
+.block-chat-card {
+    background-image: url("assets/images/sfondo2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100px; 
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 3; 
+}
+
+
+.block-chat-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    box-shadow: none;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-position: 100%;
+    background-size: cover;
+    border-radius: 100px;
+}
+
+.block-chat-card > * {
+    position: relative;
+    z-index: 4; 
+}
+
+
+.block-chat-card .card-media {
+    flex-basis: 50%;
+    background: linear-gradient(135deg, #FF69B4, #8A2BE2); 
+    border-radius: 88px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 500px;
+    height: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+
+.block-chat-card .card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px; 
+    box-shadow: none;
+}
+
+
+.card-decoration-box {
+    position: absolute;
+    top: 170px;
+    right: 200px; 
+    width: 150px;
+    height: 150px;
+    z-index: 5;
+}
+
+.card-decoration-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 900px) {
+    
+    .block-chat-section {
+        padding: 100px 20px; 
+    }
+
+    
+    .block-chat-card {
+        flex-direction: column; 
+        padding: 40px 20px; 
+        border-radius: 50px; 
+    }
+
+    
+    .block-chat-card .card-content {
+        order: 1; 
+        flex-basis: auto; 
+        width: 100%; 
+        margin-bottom: 60px; 
+        margin-top: 0; 
+    }
+
+    
+    .block-chat-card .card-media {
+        order: 2; 
+        flex-basis: auto; 
+        width: 100%; 
+        max-width: none; 
+        height: auto; 
+        border-radius: 50px; 
+        padding-top: 80%; 
+        position: relative; 
+    }
+
+    
+    .block-chat-card .card-media img,
+    .block-chat-card .card-media video { 
+        width: 100%; 
+        height: 100%;
+        object-fit: cover; 
+        display: block; 
+        position: absolute; 
+        top: 0; 
+        left: 0;
+        border-radius: 50px; 
+    }
+    
+    
+    .card-decoration-box {
+        display: none; 
+    }
+    
+    .block-chat-card .card-content h2 {
+        font-size: 28px; 
+        margin-bottom: 15px;
+    }
+    
+    .block-chat-card::before {
+        border-radius: 50px;
+    }
+}

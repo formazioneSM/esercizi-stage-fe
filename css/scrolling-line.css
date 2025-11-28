@@ -1,0 +1,128 @@
+
+@keyframes scroll-left {
+    from {
+        transform: translate3d(0, 0, 0); 
+    }
+    to {
+        
+        transform: translate3d(-25%, 0, 0); 
+    }
+}
+
+
+.scrolling-line-section {
+    width: 100%;
+    overflow: hidden; 
+    margin-top: 50px; 
+    padding: 20px 0;
+    background-color: var(--blurple); 
+}
+
+
+.scrolling-line-move {
+    display: flex;
+    width: 400%; 
+    animation: scroll-left 40s linear infinite; 
+    will-change: transform; 
+}
+
+
+.line-content {
+    flex-shrink: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 25%; 
+}
+
+
+.line-text {
+    color: var(--white);
+    font-size: 2.5rem; 
+    text-transform: uppercase;
+    white-space: nowrap; 
+    padding: 0 40px; 
+    opacity: 1; 
+    font-family: BOLD;
+}
+
+
+.discord-mark {
+    width: 40px;
+    height: 30px;
+    object-fit: contain;
+    opacity: 1; 
+}
+
+/* --- Media Query per tablet e schermi medi (fino a 1024px) --- */
+@media screen and (max-width: 1024px) {
+    .scrolling-line-section {
+        margin-top: 30px; 
+    }
+
+    .line-text {
+        /* Riduci il font */
+        font-size: 1.8rem; 
+        /* Riduci il padding orizzontale */
+        padding: 0 25px; 
+    }
+
+    .discord-mark {
+        width: 35px;
+        height: 25px;
+    }
+}
+
+/* --- Media Query per smartphone (fino a 768px) --- */
+@media screen and (max-width: 768px) {
+    .scrolling-line-section {
+        padding: 15px 0;
+    }
+
+    .line-content {
+        /* Aumentiamo la larghezza del contenitore base per avere più spazio */
+        /* Questo è il cambiamento chiave: se è troppo stretto (25%), 
+           il contenuto si stringe troppo. */
+        width: 30%; 
+    }
+
+    .line-text {
+        /* Riduci drasticamente la dimensione del font */
+        font-size: 1.3rem; 
+        /* Riduci ulteriormente il padding */
+        padding: 0 15px; 
+    }
+
+    .discord-mark {
+        width: 25px;
+        height: 18px;
+    }
+
+    /* Velocizza l'animazione per coprire la distanza extra se hai modificato la 'width' */
+    .scrolling-line-move {
+        animation-duration: 30s; 
+    }
+}
+
+/* --- Media Query per smartphone molto piccoli (fino a 480px) --- */
+@media screen and (max-width: 480px) {
+    .line-content {
+        /* Ancora più spazio se necessario, a discapito della ripetizione */
+        width: 40%;
+    }
+    
+    .line-text {
+        font-size: 1rem; /* Dimensione minima accettabile */
+        padding: 0 10px; 
+    }
+    
+    .discord-mark {
+        width: 20px;
+        height: 15px;
+    }
+
+    /* Rallenta l'animazione perché ora ha più strada da percorrere */
+    .scrolling-line-move {
+        animation-duration: 45s; 
+    }
+}
